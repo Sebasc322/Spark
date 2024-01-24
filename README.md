@@ -1,1 +1,22 @@
-# Spark
+# Using Apache Spark
+The following Jupyter notebook will:
+- Create a pyspark session
+- Define a schema for the data I am uploading
+- Open a csv file that is on Google Drive
+  - The CSV file is about the Chicago Crimes from 2001 until now - which can be found [here](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2/data)
+- Clean the data:
+  - Remove all null values.
+  - Change 'Date' column data type
+- Filter the data for last ten years.
+- Remove all the records with the following crime types:
+  - 'NON-CRIMINAL (SUBJECT SPECIFIED)'
+  - 'OTHER OFFENSE'
+  - 'STALKING'
+  - 'NON - CRIMINAL'
+  - 'ARSON'
+- Merge the similar crime types.
+  - For example, change 'Primary Type' of cases that have 'Primary Type' as ‘SEX OFFENSE’ or ‘PROSTITUTION’ such that they should have the same 'Primary Type'.
+- Analyze the data and present results:
+  - Show year-wise trend of the crime for last ten years.
+  - Find out at which hour of the day crime is highest.
+  - Find top ten crimes and present them as a bar chart.
